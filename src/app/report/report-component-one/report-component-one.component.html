@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Report Component One</mat-card-title>
+    <mat-card-subtitle>Mat-Select (API Called)</mat-card-subtitle>
+  </mat-card-header>
+  <div>
+    <form>
+      <mat-form-field appearance="fill">
+        <mat-label>Select User Id</mat-label>
+        <mat-select 
+          [(ngModel)]="selectedValue" 
+          name="id">
+          <mat-option 
+            *ngFor="let datas of dataSource" 
+            [value]="datas.title">
+            {{datas.id}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p><b>Your Title:</b><br> {{selectedValue}}</p>
+    </form>
+  </div>
+</mat-card>

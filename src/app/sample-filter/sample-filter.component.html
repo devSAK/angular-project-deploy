@@ -1,0 +1,22 @@
+<mat-card>
+    <form class="example-form" [formGroup]="sampleDatas">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Select Id</mat-label>
+            <input 
+              type="text" 
+              placeholder="Pick one" 
+              aria-label="Title" 
+              matInput 
+              [formControl]="myControl"
+              [matAutocomplete]="auto" 
+              name="term" 
+              [(ngModel)]="term">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                <mat-option *ngFor="let list of dataSource | filter: term" [value]="list.id">{{ list.id }}</mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form>
+    <div class="search_bar_spacing">
+        <button type="button" (click)="clearfields()" class="btn clearBtn">Clear</button>
+    </div>
+</mat-card>

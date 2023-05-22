@@ -1,0 +1,14 @@
+.progress_spinner {
+    margin-top: 5px;
+    padding-top: 50px;
+}
+
+.progress_spinner mat-spinner {
+    margin: 0 auto;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

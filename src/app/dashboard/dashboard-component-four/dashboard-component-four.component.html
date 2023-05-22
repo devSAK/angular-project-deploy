@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Dashboard Component Four</mat-card-title>
+    <mat-card-subtitle>Mat-Autocomplete (API Called)</mat-card-subtitle>
+  </mat-card-header>
+  <div class="form_content">
+    <form class="example-form" [formGroup]="sampleDatas">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Title</mat-label>
+        <input 
+          type="text" 
+          placeholder="Pick one" 
+          aria-label="Title" 
+          matInput 
+          [formControl]="myControl"
+          [matAutocomplete]="auto" 
+          name="term" 
+          [(ngModel)]="term">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let list of dataSource | filter: term" [value]="list.title">{{ list.title }}</mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+  </div>
+</mat-card>

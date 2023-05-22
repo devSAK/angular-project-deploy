@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Report Component Six</mat-card-title>
+        <mat-card-subtitle>Mat-Sort</mat-card-subtitle>
+    </mat-card-header>
+    <div>
+        <table matSort (matSortChange)="sortData($event)">
+            <tr>
+                <th mat-sort-header="name">ID</th>
+                <th mat-sort-header="calories">TITLE</th>
+                <th mat-sort-header="fat">USER ID</th>
+                <th mat-sort-header="carbs">COMPLETED</th>
+            </tr>
+
+            <tr *ngFor="let dessert of sortedData">
+                <td>{{ dessert.id }}</td>
+                <td>{{ dessert.title }}</td>
+                <td>{{ dessert.userId }}</td>
+                <td>{{ dessert.completed }}</td>
+            </tr>
+        </table>
+    </div>
+</mat-card>

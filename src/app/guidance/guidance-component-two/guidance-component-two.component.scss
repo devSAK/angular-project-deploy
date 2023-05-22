@@ -1,0 +1,9 @@
+.content{
+    width: 100px;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

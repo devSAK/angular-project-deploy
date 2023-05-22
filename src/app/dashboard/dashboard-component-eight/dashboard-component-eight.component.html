@@ -1,0 +1,12 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Dashboard Component Eight</mat-card-title>
+        <mat-card-subtitle>Data-pass-parent-child</mat-card-subtitle>
+    </mat-card-header>
+    <div>
+        <b>Type here : </b>
+        <input matInput type="text" [(ngModel)]='text' placeholder="Search your name">
+        <mat-divider style="margin: 20px;"></mat-divider>
+        <app-child [message]='text'></app-child>
+    </div>
+</mat-card>

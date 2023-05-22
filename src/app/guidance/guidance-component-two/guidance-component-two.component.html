@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Guidance Component Two</mat-card-title>
+        <mat-card-subtitle>Mat-Form-Field (API Called)</mat-card-subtitle>
+    </mat-card-header>
+    <div class="content">
+        <mat-form-field appearance="fill">
+            <mat-label>Completed</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Select ID</mat-label>
+            <mat-select [(ngModel)]="chosenObj">
+                <mat-option *ngFor="let list of dataSource" [value]="list.id">{{ list.id }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Title</mat-label>
+            <textarea matInput></textarea>
+        </mat-form-field>
+    </div>
+</mat-card>

@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Guidance Component Three</mat-card-title>
+        <mat-card-subtitle>Mat-Radio-Group (API Called)</mat-card-subtitle>
+    </mat-card-header>
+    <div>
+        <label id="example-radio-group-label"><b>Pick your favorite season :</b></label>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group box"
+            [(ngModel)]="favoriteTitle">
+            <mat-radio-button class="example-radio-button" *ngFor="let list of dataSource" [value]="list.title"> {{
+                list.title }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <div>
+            <b>Your favorite title is:</b> {{ favoriteTitle }}
+        </div>
+    </div>
+</mat-card>

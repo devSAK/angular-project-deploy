@@ -1,0 +1,36 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title>Dashboardothers Component Four</mat-card-title>
+		<mat-card-subtitle>Parent-To-Child-Data-Pass</mat-card-subtitle>
+	</mat-card-header>
+	<div>
+		<div class="container mt-5 text-center">
+			<h2 class="mb-3">Select User Id :</h2>
+			<select 
+			    [(ngModel)]="chosenObj" 
+				class="form-control">
+				<option *ngFor="let data of dataSource" [ngValue]="data">
+					{{ data.id}}
+				</option>
+			</select>
+			<div class="d-flex mt-5">
+				<!-- {{ chosenObj | json }} -->
+				<table class="table table-stiped">
+					<thead>
+						<tr>
+							<th>Title</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<!-- <td>{{chosenObj.title}}</td> -->
+							<td>{{chosenObj}}</td>
+							<td>{{chosenObj}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</mat-card>

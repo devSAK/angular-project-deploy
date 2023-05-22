@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Dashboard Component Two</mat-card-title>
+    <mat-card-subtitle>Ng2-Filter-Search (API Called)</mat-card-subtitle>
+  </mat-card-header>
+  <form>
+    <div class="row">
+      <div class="col-8">
+        <div class="form-group">
+          <label for="inputPassword2" class="sr-only">Search</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Search iTunes..."
+            name="term"  
+            [(ngModel)]="term">
+        </div>
+      </div>
+      <!-- <div class="col-4">
+         <button mat-raised-button (click)="onClick()" class="btn btn-primary btn-block btn-lg">Get All</button>
+      </div> -->
+    </div>
+  </form>
+  <div class="data_table">
+    <div class="progress_spinner" *ngIf="progressSpinner">
+      <mat-spinner mode="indeterminate" [diameter]="25"></mat-spinner>
+    </div>
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let user of dataSource | filter: term">
+          <td>{{user.id}}</td>
+          <td>{{user.title}}</td>
+          <td>{{user.userId}}</td>
+          <td>{{user.completed}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="pagination_div">
+    <mat-paginator #paginator [pageSizeOptions]="[3]" hidePageSize showFirstLastButtons aria-label="Select page">
+    </mat-paginator>
+  </div>
+</mat-card>

@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Dashboardothers Component Eight</mat-card-title>
+        <mat-card-subtitle>Mat-List-Item (API Called)</mat-card-subtitle>
+    </mat-card-header>
+    <div class="form-group">
+        <label for="inputPassword2" class="sr-only">Search</label>
+        <input type="text" class="form-control" name="term" placeholder="Search iTunes..." [(ngModel)]="term">
+    </div>
+    <div class="content">
+        <mat-list *ngFor="let list of dataSource | filter: term">
+            <mat-list-item>{{list.title}}</mat-list-item>
+            <mat-divider></mat-divider>
+        </mat-list>
+    </div>
+</mat-card>

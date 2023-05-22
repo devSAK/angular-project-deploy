@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Testprogress Component Three</mat-card-title>
+        <mat-card-subtitle>Mat-List-Item</mat-card-subtitle>
+    </mat-card-header>
+    <div class="content">
+        <mat-list>
+            <div mat-subheader>Folders</div>
+            <mat-list-item *ngFor="let folder of dataSource">
+                <mat-icon matListItemIcon>folder</mat-icon>
+                <div matListItemTitle>{{folder.id}}</div> &nbsp;| &nbsp;
+                <div matListItemLine>{{folder.completed}}</div>
+            </mat-list-item>
+        </mat-list>
+    </div>
+</mat-card>

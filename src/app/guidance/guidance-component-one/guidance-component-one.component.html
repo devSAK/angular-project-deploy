@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Guidance Component One</mat-card-title>
+    <mat-card-subtitle>Mat-Checkbox (API Called)</mat-card-subtitle>
+  </mat-card-header>
+  <div>
+    <div class="row">
+      <div class="col-md-6">
+        <h4><b>List of Hobbies</b></h4>
+        <div *ngFor="let item of dataSource">
+          <mat-checkbox [(ngModel)]="item.isChecked" (change)="changeSelection()" [value]="item.id">{{item.label}}</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <h4><b>Selected Hobbies:</b> {{selectedItemsList.length}} </h4>
+        <p *ngFor="let item of selectedItemsList">{{item.label}}</p>
+      </div>
+
+      <div class="col-md-5">
+        <!-- <h4><b>Object</b></h4>
+        <code>{{selectedItemsList | json}}</code> -->
+        <h4>Array of IDs</h4>
+        <code *ngFor="let item of selectedItemsList">{{item.id}}</code>
+      </div>
+    </div>
+  </div>
+</mat-card>

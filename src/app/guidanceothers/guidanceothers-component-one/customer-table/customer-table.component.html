@@ -1,0 +1,14 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Sl. No.</th>
+            <th>Customer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cust of customerList; let indx = index">
+            <td>{{indx+1}}</td>
+            <td>{{cust}}</td>
+        </tr>
+    </tbody>
+</table>

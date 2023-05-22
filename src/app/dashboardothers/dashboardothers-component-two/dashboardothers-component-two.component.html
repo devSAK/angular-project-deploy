@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Dashboardothers Component Two</mat-card-title>
+        <mat-card-subtitle>Ag-Grid-Angular (API Called)</mat-card-subtitle>
+    </mat-card-header>
+    <div>
+        <ag-grid-angular 
+          style="width: 500px; height: 250px;" 
+          class="ag-theme-alpine custom-tooltip"
+          [defaultColDef]="defaultColDef" 
+          [paginationAutoPageSize]="true" 
+          [pagination]="true"
+          [suppressRowClickSelection]="true" 
+          editType="fullRow" 
+          [suppressClickEdit]="true" 
+          [rowData]="rowData"
+          [columnDefs]="columnDefs">
+        </ag-grid-angular>
+    </div>
+</mat-card>

@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="progress_loader" *ngIf="progressLoader">
+        <mat-progress-bar color="accent" mode="indeterminate"></mat-progress-bar>
+    </div>
+
+    <div class="sub_component">
+       <app-sample-filter (searchEvent)="search()" (clearEvent)="clear()"></app-sample-filter>
+    </div>
+
+    <div id="guidance-styling" *ngIf="showGuidanceothers">
+        <div id="row_1" class="general_row_styling">
+            <div class="sub_component">
+                <app-guidanceothers-component-one></app-guidanceothers-component-one>
+            </div>
+            <div class="sub_component">
+                <app-guidanceothers-component-two></app-guidanceothers-component-two>
+            </div>
+            <div class="sub_component">
+                <app-guidanceothers-component-three></app-guidanceothers-component-three>
+            </div>
+        </div>
+        <div id="row_2" class="general_row_styling">
+            <div class="sub_component">
+                <app-guidanceothers-component-four></app-guidanceothers-component-four>
+            </div>
+            <div class="sub_component">
+                <app-guidanceothers-component-five></app-guidanceothers-component-five>
+            </div>
+            <div class="sub_component">
+                <app-guidanceothers-component-six></app-guidanceothers-component-six>
+            </div>
+        </div>
+    </div>
+</div>

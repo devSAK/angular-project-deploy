@@ -1,0 +1,19 @@
+#dashboard_div_style {
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.125);
+    padding-bottom: 15px;
+    height: 298px;
+    width: 100%;
+}
+
+#header {
+    padding-top: 5px;
+}
+.progress_spinner {
+    margin-top: 5px;
+    padding-top: 80px;
+}
+
+.progress_spinner mat-spinner {
+    margin: 0 auto;
+}

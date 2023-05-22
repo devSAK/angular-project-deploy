@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+//@import "~@ng-select/ng-select/themes/material.theme.css";
+@import 'ag-grid-community/dist/styles/ag-grid.css';
+@import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
+
+html,
+body {
+    height: 100%;
+    //overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

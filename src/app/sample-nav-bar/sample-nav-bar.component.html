@@ -1,0 +1,106 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 45px !important;">
+    <a style="cursor:pointer;" class="navbar-brand" href="#">
+        <img src="assets/TCS_Logo.png" width="32" height="35" class="d-inline-block align-top" alt="">
+    </a>
+    <span class="head_title">Sample Project</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" style="padding: 0 0 0 40px;" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" style="border: none;">
+            <li class="nav-item bordercls active" style="border: none;">
+                <a class="nav-link"
+                routerLinkActive='active' 
+                [matMenuTriggerFor]="dashboard"
+                [ngClass]="{'active': isActiveDashboard==true || isActiveDashboardOthers==true || isActiveDiagram==true }">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    Dashboard
+                </a>
+                <mat-menu #dashboard="matMenu" class="customize guidance-menu">
+                    <button mat-menu-item routerLink="/dashboard">Dashboard</button>
+                    <button mat-menu-item routerLink="/dashboardothers">Dashboard Others</button>
+                    <button mat-menu-item routerLink="/diagram">Diagram</button>
+                </mat-menu>
+            </li>
+            <li class="nav-item bordercls active" style="border: none;">
+                <a class="nav-link"
+                routerLinkActive='active'
+                [matMenuTriggerFor]="guidance"  
+                [ngClass]="{'active': isActiveGuidance==true || isActiveGuidanceOthers==true}">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    Guidance
+                </a>
+                <mat-menu #guidance="matMenu" class="customize guidance-menu">
+                    <button mat-menu-item routerLink="/guidance">Guidance</button>
+                    <button mat-menu-item routerLink="/guidanceothers">Guidance Others</button>
+                </mat-menu>
+
+            </li>
+            <li class="nav-item bordercls active" style="border: none;">
+                <a class="nav-link"
+                routerLinkActive='active'
+                [matMenuTriggerFor]="test" 
+                [ngClass]="{'active': isActiveTestprogress==true || isActiveTestprogressOthers==true}">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    Test Progress
+                </a>
+                <mat-menu #test="matMenu" class="customize guidance-menu">
+                    <button mat-menu-item routerLink="/testprogress">Test Progress</button>
+                    <button mat-menu-item routerLink="/testprogressothers">Test Progress Others</button>
+                </mat-menu>
+            </li>
+            <li class="nav-item bordercls active" style="border: none;">
+                <a class="nav-link"
+                routerLinkActive='active' 
+                [matMenuTriggerFor]="report" 
+                [ngClass]="{'active': isActiveReport==true || isActiveReportOthers==true}">
+                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                    Report
+                </a>
+                <mat-menu #report="matMenu" class="customize guidance-menu">
+                    <button mat-menu-item routerLink="/report">Report</button>
+                    <button mat-menu-item routerLink="/reportothers">Report Others</button>
+                </mat-menu>
+            </li>
+        </ul>
+        <ul class="navbar-nav navbar-right">
+
+            <li class="nav-item dropdown active" style="border: none; border-bottom: none;">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                    <i class="fa fa-bell"></i>
+                    <span class="badge badge-warning navbar-badge">15</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                    <span class="dropdown-item dropdown-header">15 Notifications</span>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-solid fa-file-code mr-2"></i> 4 new test cases added
+                        <span class="float-right text-muted text-sm">3 mins</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-solid fa-bug mr-2"></i> 8 defect logged
+                        <span class="float-right text-muted text-sm">12 hours</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                        <i class="fas fa-microchip mr-2"></i> 3 new components added
+                        <span class="float-right text-muted text-sm">2 days</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item dropdown-footer text-sm">See All Notifications</a>
+                </div>
+            </li>
+
+            <li class="nav-item active" style="border: none; border-bottom:none ;">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    User Name
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

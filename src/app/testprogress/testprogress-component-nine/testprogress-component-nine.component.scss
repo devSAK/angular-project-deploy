@@ -1,0 +1,60 @@
+#testprogress_div_style {
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.125);
+    padding-bottom: 15px;
+    height: 400px;
+    width: 100%;
+}
+
+#header {
+    padding-top: 5px;
+}
+
+.header_bar {
+    width: 120px;
+    height: 3px;
+    margin-top: -4px;
+    margin-left: 20px;
+    background-image: linear-gradient(to right, #CED8F6, #CECEF6, #A9A9F5, #81BEF7, #5882FA, #BCA9F5, #9F81F7);
+    border-radius: 20px;
+}
+
+h4 {
+    font-family: Arial;
+    font-weight: bold;
+    margin: 10px 10px 10px 20px;
+}
+
+h5 {
+    font-family: Arial;
+    color: #A4A4A4 !important;
+    margin: -15px 10px 10px 20px;
+    font-weight: bold;
+}
+
+.example-ripple-container {
+    cursor: pointer;
+    text-align: center;
+  
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+
+    margin-top: -15px;
+  
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+  
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /** Styles to make the demo look better. */
+  .example-ripple-checkbox {
+    margin: -3px 12px -3px 0;
+  }
+  
+  .example-ripple-form-field {
+    margin: 0 12px 0 0;
+  }

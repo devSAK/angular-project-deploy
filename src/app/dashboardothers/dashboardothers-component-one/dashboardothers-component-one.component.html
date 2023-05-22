@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Dashboardothers Component One</mat-card-title>
+        <mat-card-subtitle>Cdk-Accordion (API Called)</mat-card-subtitle>
+    </mat-card-header>
+    <div class="box">
+        <div class="progress_spinner" *ngIf="progressSpinner">
+            <mat-spinner mode="indeterminate" [diameter]="25"></mat-spinner>
+        </div>
+        <cdk-accordion class="example-accordion">
+            <cdk-accordion-item *ngFor="let item of dataSource; let index = index;" #accordionItem="cdkAccordionItem"
+                class="example-accordion-item" role="button" tabindex="0" [attr.id]="'accordion-header-' + index"
+                [attr.aria-expanded]="accordionItem.expanded" [attr.aria-controls]="'accordion-body-' + index">
+                <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
+                    {{ item.id }}
+                    <span class="example-accordion-item-description">
+                        Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+                    </span>
+                </div>
+                <div class="example-accordion-item-body" role="region"
+                    [style.display]="accordionItem.expanded ? '' : 'none'" [attr.id]="'accordion-body-' + index"
+                    [attr.aria-labelledby]="'accordion-header-' + index">
+                    {{ item.title }}
+                </div>
+            </cdk-accordion-item>
+        </cdk-accordion>
+    </div>
+</mat-card>

@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Guidanceothers Component One</mat-card-title>
+        <mat-card-subtitle>CRUD Push Operation</mat-card-subtitle>
+    </mat-card-header>
+    <div>
+        <div class="form-group">
+            <label>Enter Customer Name :</label>
+            <input type="text" class="form-control" [(ngModel)]="customerName">
+        </div>
+        <div style="padding-top: 10px;">
+            <input mat-raised-button type="button" value="Add Customer" (click)="addCustomer()"/>
+        </div>
+    </div>
+    <hr>
+    <app-customer-table [customers]="customerList"></app-customer-table>
+</mat-card>

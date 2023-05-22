@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Dashboard Component Nine</mat-card-title>
+    <mat-card-subtitle>Mat-Card (API Called)</mat-card-subtitle>
+  </mat-card-header>
+  <div>
+    <div class="progress_spinner" *ngIf="progressSpinner">
+      <mat-spinner mode="indeterminate" [diameter]="25"></mat-spinner>
+    </div>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+        <mat-card-title>{{ dataSource.id }}</mat-card-title>
+        <mat-card-subtitle>{{ dataSource.completed }}</mat-card-subtitle>
+      </mat-card-header>
+      <!-- <img mat-card-image src="../assets/TCS_Logo.png" alt="Logo of TCS"> -->
+      <mat-card-content>
+        <p>
+          {{ dataSource.title }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button>LIKE</button>
+        <button mat-raised-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</mat-card>

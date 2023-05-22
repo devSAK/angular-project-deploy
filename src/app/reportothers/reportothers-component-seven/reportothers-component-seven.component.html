@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Reportothers Component Seven</mat-card-title>
+        <mat-card-subtitle>Ngx-Webcam</mat-card-subtitle>
+    </mat-card-header>
+    <div>
+        <div class="container mt-5">
+            <h3>Angular Webcam Capture Image from Camera</h3>
+            <div class="col-md-12">
+              <webcam
+                [trigger]="invokeObservable"
+                (imageCapture)="captureImg($event)"
+              ></webcam>
+            </div>
+            <div class="col-md-12">
+              <button class="btn btn-danger" (click)="getSnapshot()">
+                Capture Image
+              </button>
+            </div>
+            <div class="col-12">
+            <hr>
+              <div id="results">Your taken image manifests below.</div>
+              <img [src]="webcamImage.imageAsDataUrl" height="400px" />
+            </div>
+          </div>
+    </div>
+</mat-card>

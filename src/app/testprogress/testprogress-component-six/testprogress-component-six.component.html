@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Testprogress Component Eight</mat-card-title>
+        <mat-card-subtitle>Mat-FormControl-Module</mat-card-subtitle>
+    </mat-card-header>
+    <div>
+        <!-- <form [formGroup]="profileForm" (ngSubmit)="onSubmit()"> -->
+        <form>
+
+            <label for="first-name">First Name: </label>
+            <input id="first-name" type="text" formControlName="firstName">
+            <br>
+            <label for="last-name">Last Name: </label>
+            <input id="last-name" type="text" formControlName="lastName">
+            <br>
+            <p>Complete the form to enable button.</p>
+            <!-- <button mat-button color="warn" type="submit" [disabled]="!profileForm.valid">Submit</button> -->
+            <button mat-button color="warn" type="submit">Submit</button>
+          
+        </form>
+    </div>
+</mat-card>

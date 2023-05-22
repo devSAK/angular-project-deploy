@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Testprogressothers Component Three</mat-card-title>
+        <mat-card-subtitle>Line-Chart-JS (API Called)</mat-card-subtitle>
+    </mat-card-header>
+    <div class="progress_spinner" *ngIf="progressSpinner">
+        <mat-spinner mode="indeterminate" [diameter]="25"></mat-spinner>
+    </div>
+    <div class="graph_content" *ngIf="responseCheck && !progressSpinner">
+        <canvas #lineCanvas height="155"></canvas>
+    </div>
+    <div *ngIf="!responseCheck && !progressSpinner" class="data_not_found">No Record Found</div>
+</mat-card>
